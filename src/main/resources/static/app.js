@@ -8,8 +8,7 @@ const examples = document.querySelectorAll('.example');
 async function doFetch(u) {
 output.textContent = 'Cargando...';
 try {
-const url = "http://localhost:8080"
-const resp = await fetch(url + '/fetch?url=' + encodeURIComponent(u));
+const resp = await fetch('/fetch?url=' + encodeURIComponent(u));
 const text = await resp.text();
 output.textContent = text;
 } catch (err) {

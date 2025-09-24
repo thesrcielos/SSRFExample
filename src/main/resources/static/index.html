@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SSRF Demo - Cliente</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="container">
+    <h1>SSRF Demo</h1>
+    <p>Ingresa una URL para que el servidor la solicite y muestre la respuesta. Esta página es parte del laboratorio de demostración.</p>
+
+
+    <label for="url">URL:</label>
+    <div class="input-row">
+        <input id="url" type="text" placeholder="https://example.com" value="http://localhost:8080/internal/users">
+        <button id="go">Fetch</button>
+    </div>
+
+
+    <div class="examples">
+        <button class="example" data-url="http://localhost:8080/internal/users">Ejemplo: /internal/users (local)</button>
+        <button class="example" data-url="http://169.254.169.254/latest/meta-data/">Ejemplo: metadata (simulación)</button>
+        <button class="example" data-url="https://example.com">Ejemplo: example.com</button>
+    </div>
+
+
+    <h2>Respuesta</h2>
+    <pre id="output" class="output">—</pre>
+</main>
+
+
+<script src="/app.js"></script>
+</body>
+</html>

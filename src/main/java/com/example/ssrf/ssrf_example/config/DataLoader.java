@@ -32,8 +32,8 @@ public class DataLoader {
         // Orígenes específicos (más seguro para producción)
         configuration.setAllowedOrigins(Arrays.asList(
                 "http://localhost:8080",
-                "http://localhost:8081"
-
+                "http://localhost:8081",
+                "https://ssrfexample-azerf2gthpa2hegv.canadacentral-01.azurewebsites.net"
         ));
 
         // Métodos HTTP permitidos
